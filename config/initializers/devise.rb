@@ -4,7 +4,8 @@ Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
-  config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
+  config.mailer_sender = 'no-reply@skcript.com'
+  config.secret_key = '74c8bc7e24a4ba5dc16f772cb5bf3c820775ec147e24e5ce34c75afc4a7b0fe12dbb0bff6953b66f1b3f5a974bb5bcdff31bff8b92e263ad94d93a10340c4b82'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
@@ -47,6 +48,7 @@ Devise.setup do |config|
 
   # Tell if authentication through HTTP Basic Auth is enabled. False by default.
   # config.http_authenticatable = false
+  config.skip_session_storage = [:http_auth]
 
   # If http headers should be returned for AJAX requests. True by default.
   # config.http_authenticatable_on_xhr = true
@@ -94,7 +96,7 @@ Devise.setup do |config|
 
   # If true, uses the password salt as remember token. This should be turned
   # to false if you are not using database authenticatable.
-  config.use_salt_as_remember_token = true
+  # config.use_salt_as_remember_token = true
 
   # Options to be passed to the created cookie. For instance, you can set
   # :secure => true in order to force SSL only cookies.

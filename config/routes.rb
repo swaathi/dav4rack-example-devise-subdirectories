@@ -1,12 +1,12 @@
 require 'subdomain'
 
-Example::Application.routes.draw do
+Rails.application.routes.draw do
   
   constraints(NotDav) do
     get "home/index"
     devise_for :users
-    root :to => "home#index"
-  end  
+    root "home#index"
+  end
   
   constraints :subdomain => 'webdav' do
     mount DAV4Rack::Handler.new(
